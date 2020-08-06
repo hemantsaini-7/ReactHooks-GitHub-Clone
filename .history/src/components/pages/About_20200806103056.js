@@ -17,8 +17,8 @@ const About = () => {
         <h1 className='content-head'># Project Description :</h1>
         <p className='content-para'>
           A ReactJS Application developed via React Hooks, acting as a Github
-          Clone for Users consisting Search Query, the DOM displays the Users
-          Component with individual User consisting of the Users Repos, Public
+          Clone for Users consisiting Search Query, the DOM displays the Users
+          Component with indivitual User consisiting the Users Repos, Public
           Gists and more functionalities.
         </p>
         <h3>Project DOM Flow</h3>
