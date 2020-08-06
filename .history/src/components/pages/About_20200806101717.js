@@ -15,22 +15,10 @@ const About = () => {
       </div>
       <div className='content-div'>
         <h1 className='content-head'># Project Description :</h1>
-        <p className='content-para'>
-          A ReactJS Application developed via React Hooks, acting as a Github
-          Clone for Users consisiting Search Query, the DOM displays the Users
-          Component with indivitual User consisiting the Users Repos, Public
-          Gists and more functionalities.
-        </p>
-        <h3>Project DOM Flow</h3>
-        {/* <img src= /> */}
+        <p className='content-para'>asbjksdfjshjfbsbfcjbsucashbasjdbaoshd</p>
       </div>
       <div className='content-div'>
         <h1 className='content-head'># Developer Details :</h1>
-        <p>
-          # Developed By <strong>Hemant Saini</strong>
-        </p>
-        <p>GitHub :</p>
-        <p>LinkedIn :</p>
       </div>
     </div>
   );

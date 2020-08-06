@@ -31,7 +31,7 @@ const Search = ({ setAlert, searchUsers, showClear, clearUsers }) => {
         <input
           type='text'
           name='text'
-          placeholder='Search Users....'
+          placeholder='Search Users'
           value={text}
           onChange={onChange}
           autoComplete='off'

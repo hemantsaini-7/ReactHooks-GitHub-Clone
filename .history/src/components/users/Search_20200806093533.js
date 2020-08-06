@@ -31,7 +31,7 @@ const Search = ({ setAlert, searchUsers, showClear, clearUsers }) => {
         <input
           type='text'
           name='text'
-          placeholder='Search Users....'
+          placeholder='Search Users'
           value={text}
           onChange={onChange}
           autoComplete='off'
@@ -40,7 +40,7 @@ const Search = ({ setAlert, searchUsers, showClear, clearUsers }) => {
         <input
           type='submit'
           value='Search'
-          className='btn btn-primary btn-block'
+          className='btn btn-black btn-block'
         />
       </form>
 

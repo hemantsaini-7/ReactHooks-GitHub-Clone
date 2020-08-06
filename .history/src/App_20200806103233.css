@@ -405,12 +405,7 @@ table th {
   color: chocolate;
 }
 .content-para {
-  margin: 10px 50px;
-  font-weight: bold;
-}
-.content-div h3 {
-  margin: 20px;
-  color: crimson;
+  margin-left: 10px 50px;
   font-weight: bold;
 }
 .list {

@@ -18,8 +18,8 @@ const About = () => {
         <p className='content-para'>
           A ReactJS Application developed via React Hooks, acting as a Github
           Clone for Users consisiting Search Query, the DOM displays the Users
-          Component with indivitual User consisiting the Users Repos, Public
-          Gists and more functionalities.
+          Component with indivitual User consisiting the Users Repos and Public
+          Gists
         </p>
         <h3>Project DOM Flow</h3>
         {/* <img src= /> */}
