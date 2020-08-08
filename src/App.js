@@ -8,6 +8,18 @@ import Search from "./components/users/Search";
 import Alert from "./components/layout/Alert";
 import About from "./components/pages/About";
 import axios from "axios";
+
+let githubClientId;
+let githubClientSecret;
+
+if (process.env.NODE_ENV !== "production") {
+  githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
+  githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
+} else {
+  githubClientId = process.env.GITHUB_CLIENT_ID;
+  githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
+}
+
 const App = () => {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
@@ -19,7 +31,7 @@ const App = () => {
     //this.setState({ loading: true });
     setLoading(true);
     const res = await axios.get(
-      `https://api.github.com/search/users?q=${text}&cliend_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+      `https://api.github.com/search/users?q=${text}&cliend_id=${githubClientId}&client_secret=${githubClientSecret}`
     );
     setUsers(res.data.items);
     setLoading(false);
@@ -39,7 +51,7 @@ const App = () => {
   const getUser = async (username) => {
     setLoading(true);
     const res = await axios.get(
-      `https://api.github.com/users/${username}?cliend_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+      `https://api.github.com/users/${username}?cliend_id=${githubClientId}&client_secret=${githubClientSecret}`
     );
     setUser(res.data);
     setLoading(false);
@@ -48,7 +60,7 @@ const App = () => {
   const getUserRepos = async (username) => {
     setLoading(true);
     const res = await axios.get(
-      `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&cliend_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+      `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&cliend_id=${githubClientId}&client_secret=${githubClientSecret}`
     );
     setRepos(res.data);
     setLoading(false);
