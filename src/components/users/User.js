@@ -34,9 +34,9 @@ const User = ({ getUser, getUserRepos, match, user, repos, loading }) => {
       </Link>
       Hireable={" "}
       {hireable ? (
-        <i className='fas fa-check text-success' />
+        <i className='fa fa-check text-success' />
       ) : (
-        <i className='fas fa-times-circle text-danger' />
+        <i className='fa fa-times-circle text-danger' />
       )}
       <div className='card grid-2'>
         <div className='all-center'>
